@@ -1,21 +1,21 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Home({ topic }) {
+module.exports = function Home({ topics }) {
   return (
     <Layout>
-      <div class="body">
-     <div class="topic">
-       <h2>Выбери Тему</h2>
-     {posts.map((topic) => (
-       <div className="top" id={topic.id} >
-         <form method="post" action={`/topic/${topic.id}`} className="topics">
-           <h4><a className="link" data-id={topic.id} href={`/topic/${topic.id}`}>{topic.title}</a></h4>
-         </form>
-       </div>
-     ))}
-     </div>
-     </div>
+      <div className="body">
+        <div className="topic">
+          <h2>Выбери Тему</h2>
+          {topics.map((el) => (
+            <div className="top" id={el.dataValues.id}>
+              <form method="post" action={`/topic/${el.id}`} className="topics">
+                <h4><a className="link" data-id={el.dataValues.id} href={`/topic/${el.dataValues.id}`}>{el.dataValues.title}</a></h4>
+              </form>
+            </div>
+          ))}
+        </div>
+      </div>
     </Layout>
   );
 };
