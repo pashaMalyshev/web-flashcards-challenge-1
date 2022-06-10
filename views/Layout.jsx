@@ -8,6 +8,7 @@ module.exports = function Layout({ children }) {
         <title>ВопросикиОтветики</title>
         <link rel="stylesheet" href="/stylesheets/reg.css" />
         <link rel="stylesheet" href="/stylesheets/home.css" />
+        <link rel="stylesheet" href="/stylesheets/question.css" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" />
         <script defer src="/js/application.js" />
       </head>
